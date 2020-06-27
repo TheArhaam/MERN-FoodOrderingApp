@@ -26,9 +26,10 @@ DATA MODELS:
 	-Phone Number
 	-Address
 
--Food:
+-Dish:
 	-DishName
 	-Cuisine
+	-Description
 	-Image
 	-Price
 

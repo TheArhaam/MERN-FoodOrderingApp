@@ -12,11 +12,15 @@ const orderSchema = new Schema(
       required: true,
     },
     user: User,
+    date: {
+      type: Date,
+      required: true,
+    },
   },
   {
     timestamps: true,
   }
 );
 
-const Order = mongoose.model('Order',userSchema);
+const Order = mongoose.model("Order", userSchema);
 module.exports = Order;

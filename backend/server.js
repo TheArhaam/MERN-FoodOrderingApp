@@ -18,6 +18,15 @@ connection.once("open", () => {
   console.log("MongoDB connection established successfully!");
 });
 
+// ROUTES
+const userRouter = require("./routes/api/user");
+const dishRouter = require("./routes/api/dish");
+const orderRouter = require("./routes/api/order");
+app.use('/user', userRouter);
+// app.use('/dish', dishRouter);
+// app.use('/order', orderRouter);
+
+
 app.listen(port, () => {
   console.log("Server is running on port:" + port);
 });
