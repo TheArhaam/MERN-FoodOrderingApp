@@ -4,7 +4,7 @@ let Dish = require("../../models/dish.models");
 const { response } = require("express");
 
 // GET ALL ORDERS
-router.route("/").get((request, response) => {
+router.get("/",(request, response) => {
   Order.find()
     .then((orders) => {
       return response.json(orders);
@@ -17,7 +17,7 @@ router.route("/").get((request, response) => {
 // GET USER ORDERS
 
 // POST NEW ORDER
-router.route("/new").post(async (request, response) => {
+router.post("/new",async (request, response) => {
   const dishNames = request.body.dishNames;
   var dishes = [];
 

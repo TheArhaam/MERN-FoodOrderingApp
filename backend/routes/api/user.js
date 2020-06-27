@@ -1,9 +1,11 @@
 const router = require("express").Router();
 let User = require("../../models/user.models");
 const { response } = require("express");
+const bcrypt = require("bcryptjs");
+const jwt = require("jsonwebtoken");
 
 // GET ALL USERS
-router.route("/").get((request, response) => {
+router.get("/", (request, response) => {
   User.find()
     .then((users) => {
       return response.json(users);
@@ -14,21 +16,123 @@ router.route("/").get((request, response) => {
 });
 
 // POST NEW USER
-router.route("/new").post((request, response) => {
+router.post("/new", async (request, response) => {
   const email = request.body.email;
+  const password = request.body.password;
   const name = request.body.name;
   const phoneNumber = request.body.phoneNumber;
   const address = request.body.address;
 
-  const newUser = new User({ email, name, phoneNumber, address });
+  // Checking if user exists
+  await User.findOne({ email: `${email}` })
+    .then((user) => {
+      if (user) {
+        return response.status(400).json("User already exists!");
+      }
+      // If user does not exist
+      else {
+        const newUser = new User({
+          email,
+          password,
+          name,
+          phoneNumber,
+          address,
+        });
 
-  newUser
-    .save()
-    .then(() => {
-      response.json("User successfully added!");
+        // Create Salt & Hash
+        bcrypt.genSalt(10, async (err, salt) => {
+          hash = await bcrypt.hash(newUser.password, salt);
+          newUser.password = hash;
+          console.log(hash);
+          // Adding newUser to Database
+          newUser
+            .save()
+            .then((user) => {
+              // response.json("User successfully added!");
+
+              jwt.sign(
+                { id: user.id },
+                process.env.jwtSecret,
+                {
+                  expiresIn: 3600,
+                },
+                (err, token) => {
+                  if (err) {
+                    throw err;
+                  }
+                  response.json({
+                    token,
+                    user: {
+                      id: user.id,
+                      email: user.email,
+                      name: user.name,
+                      phoneNumber: user.phoneNumber,
+                      address: user.address,
+                    },
+                  });
+                }
+              );
+            })
+            .catch((err) => {
+              response.status(400).json("Error: " + err);
+            });
+        });
+      }
     })
     .catch((err) => {
-      response.status(400).json("Error: " + err);
+      return response.status(400).json("Error: " + err);
+    });
+});
+
+// POST EXISTING USER
+router.post("/existing", async (request, response) => {
+  const email = request.body.email;
+  const password = request.body.password;
+
+  // Checking if user exists
+  await User.findOne({ email: `${email}` })
+    .then((user) => {
+      if (!user) {
+        return response.status(400).json("User does not exists!");
+      }
+      // If user does not exist
+      else {
+        // Validate Password
+        bcrypt
+          .compare(password, user.password)
+          .then((isMatch) => {
+            if (!isMatch) {
+              return response.status(400).json("Invalid credentials!");
+            } else {
+              jwt.sign(
+                { id: user.id },
+                process.env.jwtSecret,
+                {
+                  expiresIn: 3600,
+                },
+                (err, token) => {
+                  if (err) {
+                    throw err;
+                  }
+                  response.json({
+                    token,
+                    user: {
+                      id: user.id,
+                      email: user.email,
+                      name: user.name,
+                      phoneNumber: user.phoneNumber,
+                      address: user.address,
+                    },
+                  });
+                }
+              );
+            }
+          })
+          .catch((err) => {});
+      }
+    })
+    .catch((err) => {
+      return response.status(400).json("Error: " + err);
     });
 });
 

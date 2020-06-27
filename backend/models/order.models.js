@@ -19,7 +19,7 @@ const orderSchema = new Schema(
     userEmail: {
       type: String,
       required: true,
-      unique: false,
+      // unique: false,
       trim: true,
       lowercase: true,
       validate: [validateEmail, "Please fill a valid email address"],

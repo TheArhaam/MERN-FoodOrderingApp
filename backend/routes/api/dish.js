@@ -3,7 +3,7 @@ let Dish = require("../../models/dish.models");
 const { response } = require("express");
 
 // GET ALL DISHES
-router.route("/").get((request, response) => {
+router.get("/",(request, response) => {
   Dish.find()
     .then((dishes) => {
       return response.json(dishes);
@@ -22,7 +22,7 @@ router.route("/").get((request, response) => {
 // GET ITALIAN DISHES
 
 // POST NEW DISH
-router.route("/new").post((request, response) => {
+router.post("/new",(request, response) => {
   const dishName = request.body.dishName;
   const cuisine = request.body.cuisine;
   const description = request.body.description;
