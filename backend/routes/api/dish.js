@@ -2,10 +2,26 @@ const router = require("express").Router();
 let Dish = require("../../models/dish.models");
 const { response } = require("express");
 
+// GET ALL DISHES
 router.route("/").get((request, response) => {
-  return response.send("DISHES");
+  Dish.find()
+    .then((dishes) => {
+      return response.json(dishes);
+    })
+    .catch((err) => {
+      return response.json(400).json("Error: " + err);
+    });
 });
 
+// GET FAST FOOD DISHES
+
+// GET NORTH INDIAN DISHES
+
+// GET SOUTH INDIAN DISHES
+
+// GET ITALIAN DISHES
+
+// POST NEW DISH
 router.route("/new").post((request, response) => {
   const dishName = request.body.dishName;
   const cuisine = request.body.cuisine;

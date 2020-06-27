@@ -1,5 +1,6 @@
 const express = require("express");
 const mongoose = require("mongoose");
+mongoose.set('useUnifiedTopology', true);
 const cors = require("cors");
 
 require("dotenv").config();
@@ -24,7 +25,7 @@ const dishRouter = require("./routes/api/dish");
 const orderRouter = require("./routes/api/order");
 app.use('/user', userRouter);
 app.use('/dish', dishRouter);
-// app.use('/order', orderRouter);
+app.use('/order', orderRouter);
 
 
 app.listen(port, () => {

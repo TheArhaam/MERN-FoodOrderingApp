@@ -2,10 +2,18 @@ const router = require("express").Router();
 let User = require("../../models/user.models");
 const { response } = require("express");
 
+// GET ALL USERS
 router.route("/").get((request, response) => {
-  return response.send("USERS");
+  User.find()
+    .then((users) => {
+      return response.json(users);
+    })
+    .catch((err) => {
+      return response.status(400).json("Error: " + err);
+    });
 });
 
+// POST NEW USER
 router.route("/new").post((request, response) => {
   const email = request.body.email;
   const name = request.body.name;
