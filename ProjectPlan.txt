@@ -5,6 +5,7 @@ Build a Web App using MERN stack for ordering food online.
 PAGES/COMPONENTS:
 -Login
 -Register
+-Profile
 -AdminPage
 	-Add Dish
 -Main

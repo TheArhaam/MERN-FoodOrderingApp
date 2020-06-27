@@ -1,9 +1,10 @@
 const router = require("express").Router();
 let Dish = require("../../models/dish.models");
 const { response } = require("express");
+const auth = require("../../util/auth");
 
 // GET ALL DISHES
-router.get("/",(request, response) => {
+router.get("/", auth, (request, response) => {
   Dish.find()
     .then((dishes) => {
       return response.json(dishes);
@@ -13,16 +14,21 @@ router.get("/",(request, response) => {
     });
 });
 
-// GET FAST FOOD DISHES
-
-// GET NORTH INDIAN DISHES
-
-// GET SOUTH INDIAN DISHES
-
-// GET ITALIAN DISHES
+// GET CUISINE DISHES
+router.get("/:cuisine", auth, (request, response) => {
+  const cuisine = request.params.cuisine;
+  console.log(cuisine)
+  Dish.findOne({ cuisine })
+    .then((dishes) => {
+      return response.json(dishes);
+    })
+    .catch((err) => {
+      return response.json(400).json("Error: " + err);
+    });
+});
 
 // POST NEW DISH
-router.post("/new",(request, response) => {
+router.post("/new", auth, (request, response) => {
   const dishName = request.body.dishName;
   const cuisine = request.body.cuisine;
   const description = request.body.description;
