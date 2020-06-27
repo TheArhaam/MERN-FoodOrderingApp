@@ -10,7 +10,7 @@ function auth(request, response, next) {
     try {
       //   Verify Token
       const decoded = jwt.verify(token, process.env.jwtSecret);
-      // Adding user from payload
+      // Adding user id from payload into request for next
       request.user = decoded;
       next();
     } catch (e) {

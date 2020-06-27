@@ -3,6 +3,7 @@ let User = require("../../models/user.models");
 const { response } = require("express");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
+const auth = require("../../util/auth");
 
 // GET ALL USERS
 router.get("/", (request, response) => {
@@ -133,6 +134,18 @@ router.post("/existing", async (request, response) => {
     })
     .catch((err) => {
       return response.status(400).json("Error: " + err);
+    });
+});
+
+// GET USER DATA (AUTHENTICATED)
+router.get("/auth", auth, (request, response) => {
+  User.findById(request.user.id)
+    .select("-password")
+    .then((user) => {
+      response.json(user);
+    })
+    .catch((err) => {
+      response.status(400).json("Error: " + err);
     });
 });
 
