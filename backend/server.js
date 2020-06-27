@@ -23,7 +23,7 @@ const userRouter = require("./routes/api/user");
 const dishRouter = require("./routes/api/dish");
 const orderRouter = require("./routes/api/order");
 app.use('/user', userRouter);
-// app.use('/dish', dishRouter);
+app.use('/dish', dishRouter);
 // app.use('/order', orderRouter);
 
 
