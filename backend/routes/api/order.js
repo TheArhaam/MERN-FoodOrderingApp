@@ -16,6 +16,16 @@ router.get("/", auth, (request, response) => {
 });
 
 // GET USER ORDERS
+router.get("/:userEmail", auth, (request, response) => {
+    const userEmail = request.params.userEmail;
+    Order.find({userEmail})
+      .then((orders) => {
+        return response.json(orders);
+      })
+      .catch((err) => {
+        return response.status(400).json("Error: " + err);
+      });
+  });
 
 // POST NEW ORDER
 router.post("/new", auth, async (request, response) => {
