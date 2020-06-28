@@ -15,7 +15,6 @@ import {
 export const loadUser = () => (dispatch, getState) => {
   // USER LOADING
   dispatch({ type: USER_LOADING });
-
   axios
     .get("/user/auth", tokenConfig(getState))
     .then((user) => {
@@ -31,6 +30,9 @@ export const loadUser = () => (dispatch, getState) => {
       });
     });
 };
+
+// REGISTER USER
+// export const register = ()
 
 // SETUP CONFIG/HEADERS AND TOKEN
 export const tokenConfig = (getState) => {

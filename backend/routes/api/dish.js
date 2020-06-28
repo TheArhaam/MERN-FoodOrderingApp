@@ -15,7 +15,7 @@ router.get("/", auth, (request, response) => {
 });
 
 // GET CUISINE DISHES
-router.get("/:cuisine", auth, (request, response) => {
+router.get("/:cuisine", (request, response) => {
   const cuisine = request.params.cuisine;
   console.log(cuisine)
   Dish.findOne({ cuisine })
@@ -28,7 +28,7 @@ router.get("/:cuisine", auth, (request, response) => {
 });
 
 // POST NEW DISH
-router.post("/new", auth, (request, response) => {
+router.post("/new", (request, response) => {
   const dishName = request.body.dishName;
   const cuisine = request.body.cuisine;
   const description = request.body.description;
