@@ -1,0 +1,13 @@
+.dishCard {
+    background-color: rgb(32, 53, 71);
+    margin: 20px;
+    width: 25%;
+    padding: 10px;
+    color: white;
+    /* height: 25%; */
+}
+
+.imageDiv img{
+    width: 100%;
+    
+}

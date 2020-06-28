@@ -20,12 +20,14 @@ class App extends Component {
   }
   render() {
     return (
-      <Router>
-        <Navbar />
-        <Route exact path="/" component={Home}/>
-        <Route exact path="/menu/:cuisine" component={Menu}/>
-        <Route exact path="/cart" component={Cart}/>
-      </Router>
+      <div className="App">
+        <Router>
+          <Navbar />
+          <Route exact path="/" component={Home} />
+          <Route exact path="/menu/:cuisine" component={Menu} />
+          <Route exact path="/cart" component={Cart} />
+        </Router>
+      </div>
     );
   }
 }

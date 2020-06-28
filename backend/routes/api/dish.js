@@ -4,7 +4,7 @@ const { response } = require("express");
 const auth = require("../../util/auth");
 
 // GET ALL DISHES
-router.get("/", auth, (request, response) => {
+router.get("/", (request, response) => {
   Dish.find()
     .then((dishes) => {
       return response.json(dishes);
@@ -17,8 +17,7 @@ router.get("/", auth, (request, response) => {
 // GET CUISINE DISHES
 router.get("/:cuisine", (request, response) => {
   const cuisine = request.params.cuisine;
-  console.log(cuisine)
-  Dish.findOne({ cuisine })
+  Dish.find({ cuisine })
     .then((dishes) => {
       return response.json(dishes);
     })
