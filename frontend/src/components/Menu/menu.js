@@ -42,18 +42,18 @@ class Menu extends Component {
     render() {
         return (
             <div className="MenuFULL">
+                <h1>
+                    {this.state.cuisine}
+                </h1>
                 <div className="MenuInDiv">
-                    <h1>
-                        {this.state.cuisine}
-                    </h1>
                     {this.state.loading ? <Loader type="Oval" color="rgb(79, 101, 121)" height={100} width={100} /> :
                         this.state.dishes.map((dish) => {
                             return (<Dish>{dish}</Dish>)
                         })
                         // console.log('HERE')
                     }
-
                 </div>
+
             </div>
         )
     }

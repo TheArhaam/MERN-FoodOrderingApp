@@ -1,9 +1,15 @@
 .MenuFULL {
     background-color: white;
     height: max-content;
+    padding-top: 14vh;
+    text-align: center;
+    width: 100%;
 }
 
 .MenuInDiv {
-    text-align: center;
-    padding-top: 14vh;
+    /* background-color: wheat; */
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    display: inline-block; 
 }

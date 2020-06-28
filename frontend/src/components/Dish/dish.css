@@ -1,13 +1,20 @@
 .dishCard {
-    background-color: rgb(32, 53, 71);
+    background-color: rgb(13, 40, 63);
     margin: 20px;
     width: 25%;
-    padding: 10px;
+    height: 45vh;
+    /* max-height: 30%; */
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     color: white;
-    /* height: 25%; */
+    text-align: justify;
+    display: inline-block;
+    overflow: hidden;
 }
 
 .imageDiv img{
-    width: 100%;
-    
+    /* width: 100%; */
+    height: 20vh;
 }

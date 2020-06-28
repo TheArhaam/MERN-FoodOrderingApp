@@ -15,11 +15,21 @@ class Dish extends Component {
             <div className="dishCard">
                 <h3>{dishName}</h3>
                 <div className="imageDiv">
-                    <img src={imageUrl} alt={dishName} />
+                    <center>
+                        <img src={imageUrl} alt={dishName} />
+                    </center>
                 </div>
                 <p>{description}</p>
-                <p>Price: {price}</p>
-                <button>Add to Cart</button>
+                <table>
+                    <tr>
+                        <td>
+                            <p>Price: {price}</p>
+                        </td>
+                        <td>
+                            <button>Add to Cart</button>
+                        </td>
+                    </tr>
+                </table>
             </div>
         )
     }
