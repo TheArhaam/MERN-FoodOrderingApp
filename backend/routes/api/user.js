@@ -137,6 +137,8 @@ router.post("/existing", async (request, response) => {
     });
 });
 
+// UPDATE USER
+
 // GET USER DATA (AUTHENTICATED)
 router.get("/auth", auth, (request, response) => {
   User.findById(request.user.id)
