@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import './navbar.css'
 
 class Navbar extends Component {
     constructor(props) {
@@ -7,30 +8,38 @@ class Navbar extends Component {
     }
     render() {
         return (
-            <nav>
-                <Link to="/">ORDER FOOD</Link>
-                <div>
-                    <ul>
-                        <li>
-                            <Link to="/menu/Fast Food">
-                                Fast Food
-                            </Link>
-                        </li>
-                        <li>
-                            <Link to="/menu/North Indian">
-                                North Indian
-                            </Link>
-                        </li>
-                        <li>
-                            <Link to="/menu/South Indian">
-                                South Indian
-                            </Link>
-                        </li>
-                        <li>
-                            <Link to="/menu/Italian">
-                                Italian
-                            </Link>
-                        </li>
+            <nav className="nav" variant="tabs">
+                <Link to="/" className="linkElement"><h1>ORDER FOOD</h1></Link>
+                <div className="navDiv">
+                    <ul className="ulElement">
+                        <Link to="/menu/Fast Food" className="linkElement">
+                            <li className="liElement">
+                                <div className="divElement">
+                                    Fast Food
+                                </div>
+                            </li>
+                        </Link>
+                        <Link to="/menu/North Indian" className="linkElement">
+                            <li className="liElement">
+                                <div className="divElement">
+                                    North Indian
+                                </div>
+                            </li>
+                        </Link>
+                        <Link to="/menu/South Indian" className="linkElement">
+                            <li className="liElement">
+                                <div className="divElement">
+                                    South Indian
+                                </div>
+                            </li>
+                        </Link>
+                        <Link to="/menu/Italian" className="linkElement">
+                            <li className="liElement">
+                                <div className="divElement">
+                                    Italian
+                                </div>
+                            </li>
+                        </Link>
 
                     </ul>
                 </div>

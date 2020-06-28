@@ -9,7 +9,7 @@ import Register from "./components/Register/Register";
 import Home from "./components/Home/home";
 import Menu from "./components/Menu/menu";
 import Cart from "./components/Cart/cart";
-import Navbar from "./components/Navbar/navbar"
+import Navbar from "./components/Navbar/navbar";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
 axios.defaults.baseURL = "http://localhost:5000/";

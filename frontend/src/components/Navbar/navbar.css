@@ -1,0 +1,50 @@
+.nav {
+    background-color: rgb(7, 27, 44);
+}
+
+.ulElement {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(32, 53, 71); 
+    text-align: center;   
+}
+
+.liElement {
+    background-color: rgb(32, 53, 71);
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    display: inline-block;
+    align-items: center;
+    align-self: center;
+}
+
+.liElement:hover {
+    background-color: rgb(7, 27, 44);
+}
+
+.divElement{
+padding: 100;
+margin: 100;
+}
+
+.linkElement h1{
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+}
+
+.linkElement:link {
+    color: white;
+    text-decoration: none;
+}
+.linkElement:visited {
+    color: white;
+    text-decoration: none;
+}
+.linkElement:active {
+    color: white;
+    text-decoration: none;
+}
