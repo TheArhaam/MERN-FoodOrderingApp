@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "./menu.css"
 
 class Menu extends Component {
     constructor(props) {
@@ -14,8 +15,12 @@ class Menu extends Component {
 
     render() {
         return (
-            <div>
-                MENU: {this.state.cuisine}
+            <div className="MenuFULL">
+                <div className="MenuInDiv">
+                    <h1>
+                        {this.state.cuisine}
+                    </h1>
+                </div>
             </div>
         )
     }
