@@ -14,7 +14,11 @@ class Dish extends Component {
     }
 
     addToCart = () => {
-        store.dispatch(addDish(this.state.dishName, this.state.price))
+        var dish = {
+            dishName: this.state.dishName,
+            price: this.state.price
+        }
+        store.dispatch(addDish(dish))
     }
 
     render() {

@@ -5,16 +5,21 @@ import { removeDish } from "../../actions/cartActions"
 
 class CartItem extends Component {
     constructor(props) {
+        // console.log(props.children);
         super(props);
         this.state = {
-            dish: `${props.children}`
+            dishName: `${props.children.dishName}`,
+            price: `${props.children.price}`,
         }
         this.removeItem = this.removeItem.bind(this);
     }
 
     removeItem = () => {
-        // store.dispatch(removeDish(this.state))
-        // NEED A WAY TO SAVE DISH WITH PRICE
+        const dish = {
+            dishName: `${this.state.dishName}`,
+            price: `${this.state.price}`
+        }
+        store.dispatch(removeDish(dish))
     }
 
     render() {
@@ -23,7 +28,10 @@ class CartItem extends Component {
                 <table className="itemTable">
                     <tr>
                         <td className="tdItem">
-                            {this.state.dish}
+                            {this.state.dishName}
+                        </td>
+                        <td className="tdPrice">
+                            <b>Price:</b> {this.state.price}
                         </td>
                         <td className="tdBttn">
                             <button className="bttn" onClick={this.removeItem} ><i className="material-icons">delete_forever</i></button>

@@ -39,6 +39,11 @@
 .tdBttn {
     width: 0%;
 }
+.tdPrice {
+    width: min-content;
+    white-space: nowrap;
+    padding-right: 10px;
+}
 
 .tdItem {
     width:100%;

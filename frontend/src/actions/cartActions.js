@@ -1,18 +1,18 @@
 import { ADD_DISH, REMOVE_DISH, CLEAR_CART } from "./types";
 
 // ADD DISH
-export const addDish = (dishName, price) => {
+export const addDish = (dish) => {
     return {
         type: ADD_DISH,
-        payload: { dishName, price }
+        payload: { dish }
     }
 }
 
 // REMOVE DISH
-export const removeDish = (dishName, price) => {
+export const removeDish = (dish) => {
     return {
         type: REMOVE_DISH,
-        payload: { dishName, price }
+        payload: { dish }
     }
 }
 

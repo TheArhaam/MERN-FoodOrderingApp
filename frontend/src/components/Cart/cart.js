@@ -18,9 +18,9 @@ class Cart extends Component {
     componentDidMount() {
         const cartState = store.getState().cart;
         const totalCost = cartState.totalCost;
-        const dishNames = cartState.dishNames;
+        const dishes = cartState.dishes;
         this.setState({
-            items: dishNames,
+            items: dishes,
             totalCost,
             loading: false
         }, () => {
