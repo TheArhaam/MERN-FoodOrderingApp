@@ -1,3 +1,5 @@
+// COMPONENT THAT DISPLAYS DISHES BASED ON THE CUISINE SELECTED
+
 import React, { Component } from "react";
 import Dish from "../Dish/dish"
 import "./menu.css";

@@ -5,6 +5,7 @@ const initialState = {
     totalCost: 0,
 };
 
+// FOR DEALING WITH THE CART STATE
 export default function (state = initialState, action) {
     var totalCost;
     switch (action.type) {

@@ -1,6 +1,6 @@
+// COMPONENT THAT DISPLAYS THE ITEMS AVAILABLE IN THE CART
+
 import React, { Component } from "react";
-import PropTypes from "prop-types";
-import { store } from "../../store";
 import { connect } from 'react-redux';
 import CartItem from "../CartItem/cartitem"
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
@@ -43,18 +43,22 @@ class Cart extends Component {
                     }
                 </div>
                 <h2><b>Total Price: </b>{this.props.totalCost}</h2>
+                {/* IMPLEMENT CLEAR CART BUTTON */}
             </div>
         )
     }
 }
 
-Cart.propTypes = {
-    items: PropTypes.array,
-    totalCost: PropTypes.number,
-    loading: PropTypes.bool
-}
+// DOESNT SEEM TO HAVE ANY PURPOSE HERE
+// Cart.propTypes = {
+//     items: PropTypes.array,
+//     totalCost: PropTypes.number,
+//     loading: PropTypes.bool
+// }
 
-function mapStateToProps(state, ownProps) {
+// MAPS THE REDUX CART STATE TO PROPS OF CART
+// THIS ALLOWS RE-RENDERING WHEN STATE IS CHANGED
+function mapStateToProps(state) {
     return ({
         items: state.cart.dishes,
         totalCost: state.cart.totalCost,

@@ -1,3 +1,4 @@
+// COMPONENT TO ADD DISH TO MONGODB
 import React, { Component } from "react";
 import "./adddish.css";
 import axios from "axios";

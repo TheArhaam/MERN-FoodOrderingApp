@@ -1,3 +1,5 @@
+// COMPONENT FOR EACH CART ITEM
+
 import React, { Component } from "react";
 import { store } from "../../store"
 import "./cartitem.css";

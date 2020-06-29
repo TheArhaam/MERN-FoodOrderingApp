@@ -1,3 +1,5 @@
+// COMPONENT FOR EACH DISH
+
 import React, { Component } from "react";
 import { store } from "../../store";
 import { addDish } from "../../actions/cartActions"
