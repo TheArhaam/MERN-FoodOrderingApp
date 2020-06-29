@@ -33,6 +33,11 @@ router.post("/new", (request, response) => {
   const description = request.body.description;
   const imageUrl = request.body.imageUrl;
   const price = request.body.price;
+  const password = request.body.password;
+
+  if(password!="Arhaam123") {
+    return response.status(401).json("UNAUTHORIZED!");
+  }
 
   const newDish = new Dish({ dishName, cuisine, description, imageUrl, price });
 

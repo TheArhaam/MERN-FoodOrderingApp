@@ -20,16 +20,18 @@ class Dish extends Component {
                     </center>
                 </div>
                 <p>{description}</p>
-                <table>
-                    <tr>
-                        <td>
-                            <p>Price: {price}</p>
-                        </td>
-                        <td>
-                            <button>Add to Cart</button>
-                        </td>
-                    </tr>
-                </table>
+                <center>
+                    <table>
+                        <tr>
+                            <td>
+                                <p>Price: {price}</p>
+                            </td>
+                            <td>
+                                <button>Add to Cart</button>
+                            </td>
+                        </tr>
+                    </table>
+                </center>
             </div>
         )
     }

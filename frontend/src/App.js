@@ -9,6 +9,7 @@ import Register from "./components/Register/Register";
 import Home from "./components/Home/home";
 import Menu from "./components/Menu/menu";
 import Cart from "./components/Cart/cart";
+import AddDish from "./components/AddDish/adddish";
 import Navbar from "./components/Navbar/navbar";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
@@ -26,6 +27,7 @@ class App extends Component {
           <Route exact path="/" component={Home} />
           <Route exact path="/menu/:cuisine" component={Menu} />
           <Route exact path="/cart" component={Cart} />
+          <Route exact path="/dish/add" component={AddDish} />
         </Router>
       </div>
     );
