@@ -13,25 +13,29 @@ class Dish extends Component {
         const { id, dishName, cuisine, description, imageUrl, price } = this.state
         return (
             <div className="dishCard">
-                <h3>{dishName}</h3>
-                <div className="imageDiv">
-                    <center>
-                        <img src={imageUrl} alt={dishName} />
-                    </center>
+                <div className="inDiv">
+                    <h3>{dishName}</h3>
+                    <div className="imageDiv">
+                        {/* <center> */}
+                            <img src={imageUrl} alt={dishName} />
+                        {/* </center> */}
+                    </div>
+                    <p>{description}</p>
+                    <div className="tableDiv">
+                        {/* <center> */}
+                            <table>
+                                <tr>
+                                    <td>
+                                        <p><b>Price:</b> {price}</p>
+                                    </td>
+                                    <td>
+                                        <button>+ Add to Cart</button>
+                                    </td>
+                                </tr>
+                            </table>
+                        {/* </center> */}
+                    </div>
                 </div>
-                <p>{description}</p>
-                <center>
-                    <table>
-                        <tr>
-                            <td>
-                                <p>Price: {price}</p>
-                            </td>
-                            <td>
-                                <button>Add to Cart</button>
-                            </td>
-                        </tr>
-                    </table>
-                </center>
             </div>
         )
     }
