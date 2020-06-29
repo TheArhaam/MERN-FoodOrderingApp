@@ -1,4 +1,4 @@
-import { ADD_ITEM, REMOVE_ITEM, CLEAR_CART } from "../actions/types";
+import { ADD_DISH, REMOVE_DISH, CLEAR_CART } from "../actions/types";
 
 const initialState = {
     dishNames: [],
@@ -8,14 +8,14 @@ const initialState = {
 export default function (state = initialState, action) {
     var totalCost;
     switch (action.type) {
-        case ADD_ITEM:
+        case ADD_DISH:
             state.dishNames.push(action.payload.dishName);
             totalCost = state.totalCost + action.payload.price;
             return {
                 dishNames: state.dishNames,
                 totalCost: totalCost,
             };
-        case REMOVE_ITEM:
+        case REMOVE_DISH:
             var index = state.dishNames.findIndex(action.payload.dishName);
             state.dishNames.splice(index, 1)
             totalCost = state.totalCost - action.payload.price;

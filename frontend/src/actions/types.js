@@ -11,6 +11,6 @@ export const GET_ERRORS = "GET_ERRORS";
 export const CLEAR_ERRORS = "CLEAR_ERRORS";
 
 // FOR CART
-export const ADD_ITEM = "ADD_ITEM"
-export const REMOVE_ITEM = "REMOVE_ITEM"
+export const ADD_DISH = "ADD_DISH"
+export const REMOVE_DISH = "REMOVE_DISH"
 export const CLEAR_CART = "CLEAR_CART"
