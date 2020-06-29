@@ -1,0 +1,14 @@
+.CartFULL {
+    background-color: white;
+    height: max-content;
+    padding-top: 14vh;
+    text-align: center;
+    width: 100%;
+}
+
+.CartInDiv {
+    background-color: rgb(172, 193, 211);
+    width: 50%;
+    display: inline-block; 
+    box-shadow: 5px 5px 5px rgb(88, 88, 88);
+}

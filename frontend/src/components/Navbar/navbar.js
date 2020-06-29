@@ -9,7 +9,20 @@ class Navbar extends Component {
     render() {
         return (
             <nav className="nav" variant="tabs">
-                <Link to="/" className="linkElement"><h1>ORDER FOOD</h1></Link>
+                <table className="navTable">
+                    <tr>
+                        <td className="navTitle">
+                            <h1>
+                                <Link to="/" className="linkElement">ORDER FOOD</Link>
+                            </h1>
+                        </td>
+                        <td className="navCart">
+                            <Link to="/cart">
+                                <i className='fas fa-shopping-cart' style={{ "font-size": "30px", "color": "white" }}></i>
+                            </Link>
+                        </td>
+                    </tr>
+                </table>
                 <div className="navDiv">
                     <ul className="ulElement">
                         <Link to="/menu/Fast Food" className="linkElement">

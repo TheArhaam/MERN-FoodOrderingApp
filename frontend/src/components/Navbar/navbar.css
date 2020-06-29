@@ -6,6 +6,32 @@
     /* height: 12%; */
 }
 
+.navTable {
+    width: 100%;
+    /* background-color: wheat; */
+    /* border: violet solid; */
+    display: inline-block;
+    justify-content: center;
+}
+
+.navTable td {
+    /* border: violet solid; */
+}
+
+.navCart {
+    width: min-content;
+    padding-left: 10px;
+    padding-right: 20px;
+    /* background-color: wheat; */
+}
+
+.navTitle {
+    justify-content: center;
+    width: 100%;
+    padding-left: 60px;
+    text-align: center;
+}
+
 .ulElement {
     list-style-type: none;
     margin: 0;

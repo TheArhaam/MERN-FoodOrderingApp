@@ -1,0 +1,52 @@
+.cartItemFULL {
+    background-color: white;
+    margin: 10px;
+    /* width: 25%; */
+    /* max-height: 30%; */
+    padding: 5px;
+    color: black;
+    text-align: justify;
+    /* display: inline-block; */
+    overflow: hidden;
+    /* box-shadow: 0px 0px 2px rgb(41, 40, 40); */
+    /* border: 1.5px rgb(7, 27, 44) solid; */
+}
+
+/* .cartItemFULL:hover {
+    box-shadow: 0px 0px 5px rgb(41, 40, 40);
+} */
+
+.bttn {
+    padding: 5px;
+    background-color: white;
+    border: 1px black solid;
+}
+
+.bttn:hover {
+    background-color: rgb(199, 210, 219);
+}
+
+.bttn:active {
+    box-shadow: 0px 0px 5px rgb(110, 123, 134);
+}
+
+.itemTable {
+    /* border: black solid; */
+    width: 100%;
+    display: inline-block;
+}
+
+.tdBttn {
+    width: 0%;
+}
+
+.tdItem {
+    width:100%;
+}
+
+/* .itemTable td {
+    border: black solid;
+}
+.itemTable tr {
+    border: black solid;
+} */
