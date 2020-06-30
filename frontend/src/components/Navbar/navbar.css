@@ -1,5 +1,5 @@
 .nav {
-    background-color: rgb(7, 27, 44);
+    background-color: #fab64f;
     position: fixed;
     width: 100%;
     z-index: 100;
@@ -44,13 +44,13 @@
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: rgb(32, 53, 71); 
+    background-color: #ffcc80; 
     text-align: center;   
 }
 
 .liElement {
-    background-color: rgb(32, 53, 71);
-    color: white;
+    background-color: #ffcc80;
+    color: black;
     text-align: center;
     padding: 14px 20px;
     display: inline-block;
@@ -59,7 +59,7 @@
 }
 
 .liElement:hover {
-    background-color: rgb(7, 27, 44);
+    background-color: #fab64f;
 }
 
 .linkElement h1{
@@ -73,10 +73,10 @@
     text-decoration: none;
 }
 .linkElement:visited {
-    color: white;
+    color: black;
     text-decoration: none;
 }
 .linkElement:active {
-    color: white;
+    color: black;
     text-decoration: none;
 }

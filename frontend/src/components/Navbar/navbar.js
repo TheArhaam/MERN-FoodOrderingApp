@@ -18,18 +18,18 @@ class Navbar extends Component {
                     <tr>
                         <td className="navTitle">
                             <h1>
-                                <Link to="/" className="linkElement">ORDER FOOD</Link>
+                                <Link to="/" className="linkElement"> <p style={{"display":"inline","color":"black"}}>ANIM</p><p style={{"display":"inline","color":"#fab64f","-webkit-text-stroke":"1px black"}}>E</p><p style={{"display":"inline","color":"black"}}>AT</p></Link>
                             </h1>
                         </td>
                         <td className="navLogin">
                             <Link to="/profile">
-                                <i className="material-icons" style={{ "font-size": "40px", "color": "white" }}>person</i>
+                                <i className="material-icons" style={{ "font-size": "40px", "color": "black" }}>person</i>
                             </Link>
                         </td>
                         <td className="navCart">
                             <Link to="/cart">
                                 <NotificationBadge count={this.props.dishCount} effect={Effect.SCALE} frameLength={5.0} />
-                                <i className='fas fa-shopping-cart' style={{ "font-size": "30px", "color": "white" }}></i>
+                                <i className='fas fa-shopping-cart' style={{ "font-size": "30px", "color": "black" }}></i>
                             </Link>
                         </td>
                     </tr>

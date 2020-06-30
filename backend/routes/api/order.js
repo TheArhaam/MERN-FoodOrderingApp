@@ -20,7 +20,7 @@ router.get("/:userEmail", auth, (request, response) => {
     const userEmail = request.params.userEmail;
     Order.find({userEmail})
       .then((orders) => {
-        console.log(orders);
+        // console.log(orders);
         return response.json(orders);
       })
       .catch((err) => {

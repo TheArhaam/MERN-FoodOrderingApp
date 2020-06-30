@@ -1,10 +1,13 @@
 .HomeFULL {
-    background-color: white;
+    background-color: #fdf5ea;
     padding-top: 10vh;
     height: 90vh;
+    background-image: url("../../assets/Yoshimura.png");
+    background-size: cover;
+    
 }
 
 .HomeInDiv {
     text-align: center;
-    padding-top: 30vh;
+    padding-top: 20vh;
 }
