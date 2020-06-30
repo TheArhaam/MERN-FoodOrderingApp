@@ -12,6 +12,7 @@ import { store } from "../../store";
 import { loadUser } from "../../actions/authActions";
 import { connect } from "react-redux";
 import { logout } from "../../actions/authActions"
+import WelcomeProfile from "./welcomeprofile"
 
 class Profile extends Component {
     constructor(props) {
@@ -40,25 +41,3 @@ const mapStateToProps = (state) => ({
 });
 
 export default connect(mapStateToProps)(Profile);
-
-class WelcomeProfile extends Component {
-    constructor(props) {
-        super(props);
-    }
-
-    handleLogout = () => {
-        store.dispatch(logout());
-    }
-
-    render() {
-        return (
-            <div className="WelcomeProfileFULL">
-                <div className="WelcomeProfileInDiv">
-                    <h1>Welcome {this.props.children.name}!</h1>
-                    <button onClick={this.handleLogout}>LOGOUT</button>
-                </div>
-
-            </div>
-        )
-    }
-}

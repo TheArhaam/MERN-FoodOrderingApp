@@ -23,7 +23,7 @@ class Menu extends Component {
     getCuisineFood = async () => {
         await axios.get(`/dish/${this.state.cuisine}`)
             .then((response) => {
-                // console.log(response.data)
+                console.log(response.data)
                 this.setState({
                     dishes: response.data,
                     loading: false
