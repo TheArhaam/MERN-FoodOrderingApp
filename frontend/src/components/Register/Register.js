@@ -77,8 +77,8 @@ class Register extends Component {
               </td>
             </tr>
             <tr>
-              <td colSpan="2">
-                <input type="submit" value="REGISTER" />
+              <td colSpan="2" style={{"text-align":"center"}}>
+                <input type="submit" value="REGISTER" className="registerBttn"/>
               </td>
             </tr>
           </table>

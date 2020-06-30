@@ -1,6 +1,9 @@
 .ProfileFULL {
-    /* background-color: wheat; */
-    height: max-content;
+    background-color: #fdf5ea;
+    background-image: url("../../assets/MIDORIYA.png");
+    background-size: cover;
+    background-attachment: fixed;
+    height: 80vh;
     padding-top: 20vh;
     text-align: center;
     width: 100%;
@@ -12,4 +15,18 @@
     align-items: center;
     justify-content: center;
     display: inline-block; 
+}
+
+.logoutBttn {
+    padding: 5px;
+    margin-bottom: 10px;
+    background-color: #fab64f;
+    border: 2px #e28902 solid;
+    color: black;
+}
+.logoutBttn:hover {
+    background-color: #ffcc80;
+}
+.logoutBttn:active {
+    box-shadow: 0px 0px 5px rgb(88, 88, 88);
 }

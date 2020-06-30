@@ -1,6 +1,9 @@
 .MenuFULL {
-    background-color: white;
-    height: max-content;
+    background-color: #fdf5ea;
+    background-image: url("../../assets/ALLMIGHT.png");
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100%;
     padding-top: 14vh;
     text-align: center;
     width: 100%;
@@ -8,6 +11,7 @@
 
 .MenuInDiv {
     /* background-color: wheat; */
+    height: 100%;
     width: 100%;
     align-items: center;
     justify-content: center;

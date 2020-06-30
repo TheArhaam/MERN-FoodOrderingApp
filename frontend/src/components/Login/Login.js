@@ -41,8 +41,8 @@ class Login extends Component {
               </td>
             </tr>
             <tr>
-              <td colSpan="2">
-                <input type="submit" value="LOGIN" />
+              <td colSpan="2" style={{"text-align":"center"}}>
+                <input type="submit" value="LOGIN" className="loginBttn"/>
               </td>
             </tr>
           </table>

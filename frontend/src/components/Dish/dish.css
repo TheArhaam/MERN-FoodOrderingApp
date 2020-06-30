@@ -1,5 +1,5 @@
 .dishCard {
-    background-color: rgb(13, 40, 63);
+    background-color: #fab64f;
     margin: 20px;
     width: 25%;
     height: 45vh;
@@ -8,26 +8,27 @@
     padding-right: 20px;
     padding-top: 10px;
     padding-bottom: 10px;
-    color: white;
+    color: black;
     text-align: justify;
     display: inline-block;
     overflow: hidden;
-    box-shadow: 0px 0px 10px rgb(41, 40, 40);
-    border: 5px rgb(7, 27, 44) solid;
+    box-shadow: 0px 0px 5px rgb(41, 40, 40);
+    /* border: 5px rgb(7, 27, 44) solid; */
 }
 
 .dishCard button {
     padding: 5px;
-    background-color: rgb(13, 40, 63);
-    border: white solid;
-    color: white;
+    background-color: #fab64f;
+    border: 2px #e28902 solid;
+    color: black;
 }
 
 .dishCard button:hover {
-    box-shadow: 0px 0px 5px white;
+    box-shadow: 0px 0px 2px black;
+    background-color: #f8c06b;
 }
 .dishCard button:active {
-    box-shadow: 0px 0px 5px black;
+    box-shadow: 0px 0px 5px white;
 }
 
 .inDiv {
@@ -50,7 +51,7 @@
 }
 
 .imageDiv {
-    border: 2px black solid;
+    /* border: 2px #fde6c4 solid; */
     height: 20vh;
     width: 100%;
     overflow: hidden;
@@ -63,6 +64,6 @@
 }
 
 .dishCard:hover {
-    box-shadow: 0px 0px 20px rgb(0, 0, 0);
-    background-color: rgb(17, 51, 82);
+    box-shadow: 0px 0px 10px rgb(0, 0, 0);
+    background-color: #ffcc80;
 }

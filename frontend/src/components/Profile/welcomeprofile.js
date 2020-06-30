@@ -4,6 +4,7 @@ import axios from 'axios'
 import { store } from "../../store";
 import { connect } from "react-redux";
 import { logout } from "../../actions/authActions"
+import "./profile.css"
 
 class WelcomeProfile extends Component {
     constructor(props) {
@@ -46,7 +47,7 @@ class WelcomeProfile extends Component {
             <div className="WelcomeProfileFULL">
                 <div className="WelcomeProfileInDiv">
                     <h1>Welcome {this.props.children.name}!</h1>
-                    <button onClick={this.handleLogout}>LOGOUT</button>
+                    <button className="logoutBttn" onClick={this.handleLogout}>LOGOUT</button>
                     <h2>Previous Orders: </h2>
                     {
                         this.state.loading ?

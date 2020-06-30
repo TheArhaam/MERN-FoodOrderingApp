@@ -5,3 +5,22 @@
     margin: 50px;
     text-align: left;
 }
+
+
+.loginBttn {
+    width: fit-content;
+    display: inline-block;
+    margin: 10px;
+    background-color: #fab64f;
+    border:  1px #e28902 solid;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+.loginBttn:hover {
+    background-color: #ffcc80;
+}
+.loginBttn:active {
+    box-shadow: 0px 0px 5px rgb(88, 88, 88);
+}

@@ -1,25 +1,30 @@
 .CartFULL {
-    background-color: white;
-    height: max-content;
+    background-color: #fdf5ea;
+    background-image: url("../../assets/KANEKI.png");
+    background-attachment: fixed;
+    background-size: cover;
+    height: 86vh;
     padding-top: 14vh;
     text-align: center;
     width: 100%;
 }
 
 .CartInDiv {
-    background-color: rgb(172, 193, 211);
+    background-color: #fab64f;
     width: 50%;
     display: inline-block; 
     box-shadow: 5px 5px 5px rgb(88, 88, 88);
 }
 
 .clearCartBttn {
-    background-color: rgb(172, 193, 211);
-    border: 1px black solid;
     padding: 5px;
+    margin-bottom: 10px;
+    background-color: #fab64f;
+    border: 2px #e28902 solid;
+    color: black;
 }
 .clearCartBttn:hover {
-    background-color: white;
+    background-color: #ffcc80;
 }
 .clearCartBttn:active {
     /* background-color: rgb(160, 158, 158); */
@@ -30,13 +35,13 @@
     width: fit-content;
     display: inline-block;
     margin: 10px;
-    background-color: rgb(172, 193, 211);
-    border: 1px black solid;
+    background-color: #fab64f;
+    border:  2px #e28902 solid;
     padding: 10px;
     font-size: 20px;
 }
 .placeOrderBttn:hover {
-    background-color: white;
+    background-color: #ffcc80;
 }
 .placeOrderBttn:active {
     box-shadow: 0px 0px 5px rgb(88, 88, 88);

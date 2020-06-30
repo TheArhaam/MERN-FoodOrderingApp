@@ -38,16 +38,26 @@ class Cart extends Component {
                                 return (<CartItem>{item}</CartItem>);
                             })
                     }
+                    {
+                        this.props.items.length != 0 ?
+                            <button className="clearCartBttn" onClick={this.handleClearCart}>CLEAR CART</button>
+                            :
+                            <div style={{"padding":"10px"}}>
+                                NO ITEMS ADDED
+                            </div>
+                    }
                 </div>
                 <h2><b>Total Price: </b>{this.props.totalCost}</h2>
-                <button className="clearCartBttn" onClick={this.handleClearCart}>CLEAR CART</button>
                 <br />
                 {/* <button className="placeOrderBttn" onClick={this.handlePlaceOrder}>PLACE ORDER</button> */}
-                <Link className="linkBttn" to={this.props.user ? "/order" : "/profile"} >
-                    <div className="placeOrderBttn">
-                        PLACE ORDER
+                {
+                    this.props.items.length != 0 ?
+                        <Link className="linkBttn" to={this.props.user ? "/order" : "/profile"} >
+                            <div className="placeOrderBttn">
+                                PLACE ORDER
                     </div>
-                </Link>
+                        </Link> : null
+                }
             </div>
         )
     }
