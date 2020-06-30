@@ -27,6 +27,8 @@
 }
 
 .placeOrderBttn {
+    width: fit-content;
+    display: inline-block;
     margin: 10px;
     background-color: rgb(172, 193, 211);
     border: 1px black solid;
@@ -38,4 +40,7 @@
 }
 .placeOrderBttn:active {
     box-shadow: 0px 0px 5px rgb(88, 88, 88);
+}
+.linkBttn{
+    color: black;
 }
