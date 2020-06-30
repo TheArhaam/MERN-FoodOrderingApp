@@ -73,13 +73,7 @@ Following functions are supported:
     <td><img src="resources/FoodCart.png"></td>
   </tr>
   <tr>
-    <td align="center">8)Confirm Order</td>
-  </tr>
-  <tr>
-    <td><img src="resources/ConfirmOrder.png"></td>
-  </tr>
-  <tr>
-    <td align="center">9)Order Placed</td>
+    <td align="center">8)Order Placed</td>
   </tr>
   <tr>
     <td><img src="resources/OrderPlaced.png"></td>
