@@ -52,6 +52,25 @@ export const register = (newUser) => (dispatch) => {
     });
 }
 
+// LOGIN USER
+export const login = (user) => (dispatch) => {
+  axios.post("user/existing", user)
+    .then((response) => {
+      dispatch({
+        type: LOGIN_SUCCESS,
+        payload: response.data,
+      })
+    })
+    .catch((err) => {
+      alert(err.response.data)
+      dispatch(returnErrors(err.response.data, err.response.status, "LOGIN_FAIL"));
+      dispatch({
+        type: LOGIN_FAIL,
+      })
+    });
+}
+
+
 // LOGOUT USER
 export const logout = () => {
   return {

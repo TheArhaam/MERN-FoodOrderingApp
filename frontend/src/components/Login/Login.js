@@ -1,19 +1,31 @@
 import React, { Component } from "react";
+import { login } from "../../actions/authActions"
 import "./Login.css"
+import { connect } from "react-redux";
 class Login extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      email: "",
-      password: "",
-      isLoading: "",
+    // this.state = {
+    //   email: "",
+    //   password: "",
+    //   isLoading: "",
+    // };
+  }
+
+  handleLogin = (e) => {
+    e.preventDefault();
+    const { email, password } = e.target.elements;
+    const user = {
+      email: `${email.value}`,
+      password: `${password.value}`,
     };
+    this.props.login(user);
   }
 
   render() {
     return (
       <div className="LoginFULL">
-        <form>
+        <form onSubmit={this.handleLogin}>
           <center><h2>LOGIN</h2></center>
           <table>
             <tr>
@@ -40,4 +52,9 @@ class Login extends Component {
   }
 }
 
-export default Login;
+const mapStateToProps = (state) => ({
+  isAuthenticated: state.auth.isAuthenticated,
+  error: state.error
+});
+
+export default connect(mapStateToProps, { login })(Login);
