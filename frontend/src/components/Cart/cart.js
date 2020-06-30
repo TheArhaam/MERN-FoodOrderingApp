@@ -44,6 +44,7 @@ class Cart extends Component {
                 </div>
                 <h2><b>Total Price: </b>{this.props.totalCost}</h2>
                 {/* IMPLEMENT CLEAR CART BUTTON */}
+                {/* IMPLEMENT PLACE ORDER BUTTON */}
             </div>
         )
     }

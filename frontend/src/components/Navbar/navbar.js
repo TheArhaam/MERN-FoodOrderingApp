@@ -2,7 +2,10 @@
 
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import { connect } from 'react-redux';
 import './navbar.css'
+import NotificationBadge from 'react-notification-badge';
+import { Effect } from 'react-notification-badge';
 
 class Navbar extends Component {
     constructor(props) {
@@ -20,6 +23,7 @@ class Navbar extends Component {
                         </td>
                         <td className="navCart">
                             <Link to="/cart">
+                                <NotificationBadge count={this.props.dishCount} effect={Effect.SCALE} frameLength={5.0}/>
                                 <i className='fas fa-shopping-cart' style={{ "font-size": "30px", "color": "white" }}></i>
                             </Link>
                         </td>
@@ -63,4 +67,10 @@ class Navbar extends Component {
     }
 }
 
-export default Navbar;
+function mapStateToProps(state) {
+    return ({
+        dishCount: state.cart.dishCount,
+    })
+}
+
+export default connect(mapStateToProps)(Navbar);
