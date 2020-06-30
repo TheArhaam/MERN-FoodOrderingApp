@@ -31,7 +31,11 @@ export default function (state = initialState, action) {
                 dishCount: dishCount
             };
         case CLEAR_CART:
-            return initialState;
+            return {
+                dishes: [],
+                totalCount: 0,
+                dishCount: 0
+            };
         default:
             return state;
     }

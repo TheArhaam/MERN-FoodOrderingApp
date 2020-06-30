@@ -2,6 +2,8 @@
 
 import React, { Component } from "react";
 import { connect } from 'react-redux';
+import { store } from "../../store"
+import { clearCart } from "../../actions/cartActions"
 import CartItem from "../CartItem/cartitem"
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 import Loader from 'react-loader-spinner';
@@ -10,6 +12,7 @@ import "./cart.css"
 class Cart extends Component {
     constructor(props) {
         super(props);
+        this.handleClearCart = this.handleClearCart.bind(this);
         // this.state = {
         //     items: [],
         //     totalCost: 0,
@@ -30,6 +33,10 @@ class Cart extends Component {
     //     });
     // }
 
+    handleClearCart = () => {
+        store.dispatch(clearCart());
+    }
+
     render() {
         return (
             <div className="CartFULL">
@@ -43,8 +50,9 @@ class Cart extends Component {
                     }
                 </div>
                 <h2><b>Total Price: </b>{this.props.totalCost}</h2>
-                {/* IMPLEMENT CLEAR CART BUTTON */}
-                {/* IMPLEMENT PLACE ORDER BUTTON */}
+                <button className="clearCartBttn" onClick={this.handleClearCart}>CLEAR CART</button>
+                <br />
+                <button className="placeOrderBttn">PLACE ORDER</button>
             </div>
         )
     }

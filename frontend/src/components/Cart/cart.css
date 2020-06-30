@@ -12,3 +12,30 @@
     display: inline-block; 
     box-shadow: 5px 5px 5px rgb(88, 88, 88);
 }
+
+.clearCartBttn {
+    background-color: rgb(172, 193, 211);
+    border: 1px black solid;
+    padding: 5px;
+}
+.clearCartBttn:hover {
+    background-color: white;
+}
+.clearCartBttn:active {
+    /* background-color: rgb(160, 158, 158); */
+    box-shadow: 0px 0px 5px rgb(88, 88, 88);
+}
+
+.placeOrderBttn {
+    margin: 10px;
+    background-color: rgb(172, 193, 211);
+    border: 1px black solid;
+    padding: 10px;
+    font-size: 20px;
+}
+.placeOrderBttn:hover {
+    background-color: white;
+}
+.placeOrderBttn:active {
+    box-shadow: 0px 0px 5px rgb(88, 88, 88);
+}
