@@ -52,7 +52,7 @@ Following functions are supported:
     <td align="center">5)Italian</td>
   </tr>
   <tr>
-    <td><img src="resources/Italian.png"></td>
+    <td><img src="resources/ItalianFood.png"></td>
   </tr>
   <tr>
     <td align="center">5)Login/Register</td>
