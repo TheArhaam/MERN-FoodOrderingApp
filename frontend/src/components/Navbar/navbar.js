@@ -21,9 +21,14 @@ class Navbar extends Component {
                                 <Link to="/" className="linkElement">ORDER FOOD</Link>
                             </h1>
                         </td>
+                        <td className="navLogin">
+                            <Link to="/profile">
+                                <i className="material-icons" style={{ "font-size": "40px", "color": "white" }}>person</i>
+                            </Link>
+                        </td>
                         <td className="navCart">
                             <Link to="/cart">
-                                <NotificationBadge count={this.props.dishCount} effect={Effect.SCALE} frameLength={5.0}/>
+                                <NotificationBadge count={this.props.dishCount} effect={Effect.SCALE} frameLength={5.0} />
                                 <i className='fas fa-shopping-cart' style={{ "font-size": "30px", "color": "white" }}></i>
                             </Link>
                         </td>

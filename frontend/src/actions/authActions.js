@@ -32,7 +32,32 @@ export const loadUser = () => (dispatch, getState) => {
 };
 
 // REGISTER USER
-// export const register = ()
+export const register = (newUser) => (dispatch) => {
+  // const body = JSON.stringify({ email, password, name, phoneNumber, address });
+  axios.post("/user/new", newUser)
+    .then((response) => {
+      alert("REGISTRATION SUCCESS");
+      dispatch({
+        type: REGISTER_SUCESS,
+        payload: response.data
+      })
+    })
+    .catch((err) => {
+      // console.log(err);
+      alert(err.response.data)
+      dispatch(returnErrors(err.response.data, err.response.status, "REGISTER_FAIL"));
+      dispatch({
+        type: REGISTER_FAIL,
+      })
+    });
+}
+
+// LOGOUT USER
+export const logout = () => {
+  return {
+    type: LOGOUT_SUCCESS
+  }
+}
 
 // SETUP CONFIG/HEADERS AND TOKEN
 export const tokenConfig = (getState) => {

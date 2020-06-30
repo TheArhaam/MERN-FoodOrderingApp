@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-
+import "./Login.css"
 class Login extends Component {
   constructor(props) {
     super(props);
@@ -14,6 +14,7 @@ class Login extends Component {
     return (
       <div className="LoginFULL">
         <form>
+          <center><h2>LOGIN</h2></center>
           <table>
             <tr>
               <td>EMAIL:</td>

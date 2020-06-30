@@ -1,30 +1,44 @@
 import React, { Component } from "react";
-import { connect } from "react-redux"
+import { connect } from "react-redux";
+import "./register.css"
+import { register } from "../../actions/authActions"
 
 class Register extends Component {
 
   constructor(props) {
     super(props);
-    this.state = {
-      name: "",
-      email: "",
-      phoneNum: "",
-      address: "",
-      password: "",
-      msg: null,
-    };
+    // this.state = {
+    //   name: "",
+    //   email: "",
+    //   phoneNum: "",
+    //   address: "",
+    //   password: "",
+    //   msg: null,
+    // };
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleSubmit = (e) => {
     e.preventDefault();
-    console.log('SUBMIT');
+    // console.log('SUBMIT');
+    const { email, password, name, phoneNumber, address } = e.target.elements;
+    // console.log(e.target.elements)
+    // console.log(email.value);
+    const newUser = {
+      email: `${email.value}`,
+      password: `${password.value}`,
+      name: `${name.value}`,
+      phoneNumber: `${phoneNumber.value}`,
+      address: `${address.value}`,
+    };
+    this.props.register(newUser);
   }
 
   render() {
     return (
-      <div className="LoginFULL">
+      <div className="RegisterFULL">
         <form onSubmit={this.handleSubmit}>
+          <center><h2>REGISTER</h2></center>
           <table>
             <tr>
               <td>NAME:</td>
@@ -41,7 +55,7 @@ class Register extends Component {
             <tr>
               <td>PHONE NUMBER:</td>
               <td>
-                <input type="number" name="phone" id="phone" />
+                <input type="number" name="phoneNumber" id="phoneNumber" />
               </td>
             </tr>
             <tr>
@@ -68,6 +82,8 @@ class Register extends Component {
               </td>
             </tr>
           </table>
+          {/* {Object.keys(this.props.error.msg).length === 0 && this.props.error.msg.constructor === Object ? null : this.props.error.msg}
+          {console.log(this.props.error.msg)} */}
         </form>
       </div>
     );
@@ -79,4 +95,4 @@ const mapStateToProps = (state) => ({
   error: state.error
 });
 
-export default Register;
+export default connect(mapStateToProps, { register })(Register);

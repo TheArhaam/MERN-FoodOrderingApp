@@ -1,0 +1,15 @@
+.ProfileFULL {
+    background-color: wheat;
+    height: max-content;
+    padding-top: 20vh;
+    text-align: center;
+    width: 100%;
+}
+
+.ProfileInDiv {
+    /* background-color: wheat; */
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    display: inline-block; 
+}

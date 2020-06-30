@@ -18,6 +18,13 @@
     /* border: violet solid; */
 }
 
+
+.navLogin{
+    width: min-content;
+    padding-left: 10px;
+    padding-right: 20px;
+}
+
 .navCart {
     width: min-content;
     padding-left: 10px;
@@ -28,7 +35,7 @@
 .navTitle {
     justify-content: center;
     width: 100%;
-    padding-left: 60px;
+    padding-left: 130px;
     text-align: center;
 }
 

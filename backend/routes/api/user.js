@@ -23,7 +23,7 @@ router.post("/new", async (request, response) => {
   const name = request.body.name;
   const phoneNumber = request.body.phoneNumber;
   const address = request.body.address;
-
+  console.log("EMAIL: " + email)
   // Checking if user exists
   await User.findOne({ email: `${email}` })
     .then((user) => {
@@ -129,7 +129,7 @@ router.post("/existing", async (request, response) => {
               );
             }
           })
-          .catch((err) => {});
+          .catch((err) => { });
       }
     })
     .catch((err) => {
